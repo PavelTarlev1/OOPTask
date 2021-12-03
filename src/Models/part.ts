@@ -2,20 +2,20 @@ import { PartType } from './partType';
 
 export abstract class Parts {
 
-    _partType: PartType;
+    partType: PartType;
 
-    _name: string;
+    name: string;
 
-    _price: number;
+    price: number;
 
-    _availability: number;
+    availability: number;
 
 
     protected constructor(partType: PartType, name: string, price: number, availability: number) {
-        this._partType = partType;
-        this._name = name;
-        this._price = price;
-        this._availability = availability;
+        this.partType = partType;
+        this.name = name;
+        this.price = price;
+        this.availability = availability;
 
     }
 

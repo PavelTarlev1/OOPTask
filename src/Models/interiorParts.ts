@@ -6,15 +6,20 @@ export class InteriorParts extends Parts {
 
     public _fragile: boolean;
 
-    public _availability: number;
+    public availability: number;
 
-    constructor(partType: PartType, name: string, price: number, availability:
-        number, materials: string, fragile: boolean) {
+    constructor(partType: PartType,
+                name: string,
+                price: number,
+                availability: number,
+                materials:
+                    string,
+                fragile: boolean) {
         super(partType, name, price, availability);
-        this._partType = partType;
-        this._name = name;
-        this._price = price;
-        this._availability = availability;
+        this.partType = partType;
+        this.name = name;
+        this.price = price;
+        this.availability = availability;
         this._materials = materials;
         this._fragile = fragile;
 
@@ -28,7 +33,7 @@ export class InteriorParts extends Parts {
 
     override partInfo(): void {
         // eslint-disable-next-line no-console
-        console.log(this._partType, this._name, this._price, this._availability);
+        console.log(this.partType, this.name, this.price, this.availability);
     }
 
 }
